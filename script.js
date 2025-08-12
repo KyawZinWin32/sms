@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const displayTitle = document.getElementById('display-title');
   
   // Replace with your actual Apps Script URL
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9b-q3Ri4hhjugJJ8di7xRCX4LuUcTo4Ljt8O1ePdes8LxGBoLMdQruI8Y7H3IZLXhSA/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYOT3Z8E6oUC8-EfIxOdYhpUyppeLT3rMc5tZT8R0NWJeyRa_MAE-XonoO_IQXeXEKLg/exec';
   
   fetchBtn.addEventListener('click', fetchAttendanceData);
   
