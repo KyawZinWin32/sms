@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const errorDiv = document.getElementById('error');
   const displayTitle = document.getElementById('display-title');
   
-  // Replace with your actual Apps Script URL
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYOT3Z8E6oUC8-EfIxOdYhpUyppeLT3rMc5tZT8R0NWJeyRa_MAE-XonoO_IQXeXEKLg/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx9b-q3Ri4hhjugJJ8di7xRCX4LuUcTo4Ljt8O1ePdes8LxGBoLMdQruI8Y7H3IZLXhSA/exec';
   
   fetchBtn.addEventListener('click', fetchAttendanceData);
   
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
           tr.innerHTML = `
             <td>${student.name || 'N/A'}</td>
             <td>${student.rollNo || 'N/A'}</td>
-            <td class="percentage-cell ${attendanceClass}">${student.percentage ||}</td>
+            <td class="percentage-cell ${attendanceClass}">${student.percentage || '0%'}</td>
           `;
           attendanceData.appendChild(tr);
         });
