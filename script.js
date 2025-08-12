@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
           tr.innerHTML = `
             <td>${student.name || 'N/A'}</td>
             <td>${student.rollNo || 'N/A'}</td>
-            <td class="percentage-cell ${attendanceClass}">${student.percentage || '0%'}</td>
+            <td class="percentage-cell ${attendanceClass}">${student.percentage ||}</td>
           `;
           attendanceData.appendChild(tr);
         });
