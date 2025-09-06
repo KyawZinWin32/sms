@@ -78,7 +78,7 @@
   </footer>
 
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwZEwJctMJ6r8QaL-DlAu11Il-yVU7sER5DXu_irrj-l67IDBZ9SfuhaNs_-iyquyMt/exec"; // your GS link
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwZEwJctMJ6r8QaL-DlAu11Il-yVU7sER5DXu_irrj-l67IDBZ9SfuhaNs_-iyquyMt/exec"; // GS link
     let allData = [];
     const defaultCols = ["Name", "Roll Number", "Overall"];
 
@@ -110,9 +110,6 @@
         let tr = "<tr>";
         columns.forEach(col => {
           let value = row[col] || "";
-          if (typeof value === "number") {
-            value = value + "%"; // convert number to percentage string
-          }
           tr += `<td>${value}</td>`;
         });
         tr += "</tr>";
