@@ -3,53 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Attendance Data</title>
-  <style>
-    body { font-family: Arial, sans-serif; background:#f5f5f5; padding:20px; margin:0; }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-    header img {
-      height: 50px;
-    }
-    .filter-box {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .filter-box label {
-      margin: 0 8px;
-      font-size: 14px;
-    }
-    table { width: 90%; margin:auto; border-collapse: collapse; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
-    th { background: #4CAF50; color: white; }
-    tr:nth-child(even) { background: #f9f9f9; }
-    footer {
-      margin-top: 30px;
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 12px;
-      border-radius: 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- ✅ Header with two logos -->
   <header>
-    <img src="school_logo.png" alt="Logo Left">
+    <img src="images/school_logo.png" alt="Logo Left">
     <h1>Attendance Report</h1>
-    <img src="department_logo.png" alt="Logo Right">
+    <img src="images/department_logo.png" alt="Logo Right">
   </header>
 
   <!-- ✅ Checkbox Filter -->
@@ -77,50 +38,6 @@
     <p>© 2025 Student Management System | Developed by KyawZinWin</p>
   </footer>
 
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyBfTgjLgJIZpW04ziHnhHk7A9GJzdNCHRUj5o7N24jOtwrONqndHqXS8zSDCZ3OA5g/exec"; // GS link
-    let allData = [];
-    const defaultCols = ["Name", "Roll Number", "Overall"];
-
-    // Fetch data from GS
-    fetch(scriptURL)
-      .then(res => res.json())
-      .then(data => {
-        allData = data;
-        renderTable(); // default render
-      })
-      .catch(err => console.error("Error loading data: ", err));
-
-    // Render function
-    function renderTable() {
-      const checkedMonths = [...document.querySelectorAll("input[type=checkbox]:checked")].map(cb => cb.value);
-      const columns = [...defaultCols, ...checkedMonths];
-
-      // Table head
-      const thead = document.getElementById("tableHead");
-      thead.innerHTML = "";
-      columns.forEach(col => {
-        thead.innerHTML += `<th>${col}</th>`;
-      });
-
-      // Table body
-      const tbody = document.querySelector("#attendanceTable tbody");
-      tbody.innerHTML = "";
-      allData.forEach(row => {
-        let tr = "<tr>";
-        columns.forEach(col => {
-          let value = row[col] || "";
-          tr += `<td>${value}</td>`;
-        });
-        tr += "</tr>";
-        tbody.innerHTML += tr;
-      });
-    }
-
-    // Checkbox event
-    document.querySelectorAll("input[type=checkbox]").forEach(cb => {
-      cb.addEventListener("change", renderTable);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
