@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbyBfTgjLgJIZpW04ziHnhHk7A9GJzdNCHRUj5o7N24jOtwrONqndHqXS8zSDCZ3OA5g/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbxiZudeePn-10n4zxcwBOu--E7fh3lPICv00KrhU75tnLmOXEWHT9lHL--eCUKII8a0YA/exec";
 let allData = [];
 const defaultCols = ["Name", "Roll Number", "Overall"];
 
