@@ -66,3 +66,92 @@ footer {
   padding: 12px;
   border-radius: 8px;
 }
+.notice-container {
+‎            max-width: 800px;
+‎            margin: 40px auto;
+‎            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+‎            padding: 20px;
+‎        }
+‎        
+‎        .notice-box {
+‎            background-color: #fff9f9;
+‎            border: 1px solid #ffcccc;
+‎            border-radius: 12px;
+‎            box-shadow: 0 8px 20px rgba(255, 100, 100, 0.08);
+‎            overflow: hidden;
+‎            transition: all 0.3s ease;
+‎        }
+‎        
+‎        .notice-box:hover {
+‎            box-shadow: 0 12px 25px rgba(255, 100, 100, 0.12);
+‎            transform: translateY(-2px);
+‎        }
+‎        
+‎        .notice-header {
+‎            background-color: #fff0f0;
+‎            padding: 20px 25px;
+‎            border-bottom: 1px solid #ffdddd;
+‎        }
+‎        
+‎        .notice-title {
+‎            color: #ff0000;
+‎            font-size: 28px;
+‎            font-weight: 700;
+‎            margin: 0;
+‎            display: flex;
+‎            align-items: center;
+‎            gap: 12px;
+‎        }
+‎        
+‎        .notice-title:before {
+‎            content: "⚠";
+‎            font-size: 32px;
+‎        }
+‎        
+‎        .notice-content {
+‎            padding: 25px;
+‎            line-height: 1.7;
+‎            color: #444;
+‎        }
+‎        
+‎        .notice-content p {
+‎            margin-bottom: 18px;
+‎            font-size: 17px;
+‎        }
+‎        
+‎        .notice-content p:last-child {
+‎            margin-bottom: 0;
+‎        }
+‎        
+‎        .highlight {
+‎            background-color: #fff0f5;
+‎            padding: 3px 8px;
+‎            border-radius: 4px;
+‎            font-weight: 600;
+‎            color: #cc0000;
+‎        }
+‎        
+‎        .divider {
+‎            height: 1px;
+‎            background: linear-gradient(to right, transparent, #ffcccc, transparent);
+‎            margin: 20px 0;
+‎        }
+‎        
+‎        @media (max-width: 600px) {
+‎            .notice-container {
+‎                padding: 15px;
+‎                margin: 20px auto;
+‎            }
+‎            
+‎            .notice-title {
+‎                font-size: 24px;
+‎            }
+‎            
+‎            .notice-content {
+‎                padding: 20px;
+‎            }
+‎            
+‎            .notice-content p {
+‎                font-size: 16px;
+‎            }
+‎        }
