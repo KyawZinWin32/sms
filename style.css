@@ -135,23 +135,4 @@ footer {
 ‎            height: 1px;
 ‎            background: linear-gradient(to right, transparent, #ffcccc, transparent);
 ‎            margin: 20px 0;
-‎        }
-‎        
-‎        @media (max-width: 600px) {
-‎            .notice-container {
-‎                padding: 15px;
-‎                margin: 20px auto;
-‎            }
-‎            
-‎            .notice-title {
-‎                font-size: 24px;
-‎            }
-‎            
-‎            .notice-content {
-‎                padding: 20px;
-‎            }
-‎            
-‎            .notice-content p {
-‎                font-size: 16px;
-‎            }
-‎        }
+‎       }
