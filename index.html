@@ -32,18 +32,92 @@
     </thead>
     <tbody></tbody>
   </table>
-  <div class="alert-box">
-    <h2 class="alert-title">Notice</h2>
-    <div class="alert-content">
-        <p>This version is only a <span class="highlight">rough prototype</span>.</p>
+<style>
+    .notice-container {
+        background: linear-gradient(145deg, #fff8f8, #fff0f0);
+        border: 2px solid #ff6b6b;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 30px 0;
+        box-shadow: 0 8px 25px rgba(255, 107, 107, 0.15);
+        position: relative;
+        overflow: hidden;
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+    
+    .notice-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 100%;
+        background: linear-gradient(to bottom, #ff4444, #ff8888);
+    }
+    
+    .notice-title {
+        color: #ff0000;
+        font-size: 28px;
+        font-weight: 800;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding-left: 35px;
+        position: relative;
+    }
+    
+    .notice-title::before {
+        content: '⚠';
+        position: absolute;
+        left: 0;
+        top: -2px;
+        font-size: 32px;
+    }
+    
+    .notice-content {
+        color: #444;
+        line-height: 1.7;
+        font-size: 17px;
+        padding-left: 15px;
+    }
+    
+    .notice-content p {
+        margin: 15px 0;
+    }
+    
+    .notice-content strong {
+        background-color: rgba(255, 107, 107, 0.15);
+        color: #d32f2f;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-weight: 700;
+        border: 1px solid rgba(255, 107, 107, 0.3);
+    }
+    
+    .divider {
+        height: 1px;
+        background: linear-gradient(to right, 
+            transparent 0%, 
+            #ff9999 20%, 
+            #ff9999 80%, 
+            transparent 100%);
+        margin: 25px 15px;
+    }
+</style>
+
+<div class="notice-container">
+    <h2 class="notice-title">Notice</h2>
+    <div class="notice-content">
+        <p>This version is only a <strong>rough prototype</strong>.</p>
         
-        <div class="alert-divider"></div>
+        <div class="divider"></div>
         
         <p>The data has not yet been accurately collected, so the information displayed on the website may not be reliable or precise.</p>
         
-        <p>Only through a <span class="highlight">combined hardware and software system</span> can correct data be gathered, ensuring that the website provides accurate and reliable information.</p>
+        <div class="divider"></div>
+        
+        <p>Only through a <strong>combined hardware and software system</strong> can correct data be gathered, ensuring that the website provides accurate and reliable information.</p>
     </div>
-  </div>
+</div>
   <!-- ✅ Footer -->
   <footer>
     <p>© 2025 Student Management System | Developed by KyawZinWin</p>
